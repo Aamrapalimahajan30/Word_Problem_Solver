@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Smart Math Solver</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+<!-- 🌟 NAVBAR -->
+<nav class="navbar">
+
+    <div class="logo">
+        <i class="fa-solid fa-calculator"></i> MathSolver
+    </div>
+
+    <!-- Menu -->
+    <ul class="nav-links">
+        <li><a href="/"><i class="fa fa-home"></i> Home</a></li>
+        <li><a href="/history"><i class="fa fa-clock"></i> History</a></li>
+
+        <!-- Dropdown -->
+        <li class="dropdown">
+            <a href="#"><i class="fa fa-layer-group"></i> Features ▾</a>
+            <ul class="dropdown-menu">
+                <li><a href="#">Arithmetic</a></li>
+                <li><a href="#">Algebra</a></li>
+                <li><a href="#">Area</a></li>
+                <li><a href="#">Volume</a></li>
+                <li><a href="#">Ratio</a></li>
+            </ul>
+        </li>
+
+        <li><a href="/logout"><i class="fa fa-sign-out-alt"></i> Logout</a></li>
+    </ul>
+
+    <!-- Right Side -->
+    <div class="nav-right">
+        <button onclick="toggleTheme()" class="theme-btn">
+            🌙
+        </button>
+    </div>
+
+</nav>
+
+<!-- 🌟 MAIN CONTENT -->
+<div class="container">
+    {% block content %}{% endblock %}
+</div>
+
+<!-- 🌟 FOOTER -->
+<footer>
+    <p>© 2026 Smart Math Solver | Built with ❤️</p>
+</footer>
+
+<!-- JS -->
+<script>
+function toggleTheme() {
+    document.body.classList.toggle("dark-mode");
+}
+</script>
+
+</body>
+</html>

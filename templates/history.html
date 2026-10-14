@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>History</h2>
+
+<table border="1" cellpadding="8">
+<tr>
+    <th>Problem</th>
+    <th>Result</th>
+    <th>Category</th>
+</tr>
+
+{% for row in data %}
+<tr>
+    <td>{{ row[0] }}</td>
+    <td>{{ row[1] }}</td>
+    <td>{{ row[2] }}</td>
+</tr>
+{% endfor %}
+</table>
+
+<br>
+
+<form action="/clear-history" method="post">
+    <button 
+        style="background:red;color:white;padding:8px;"
+        onclick="return confirm('Are you sure you want to delete history?')">
+        Clear History
+    </button>
+</form>
+
+{% endblock %}
